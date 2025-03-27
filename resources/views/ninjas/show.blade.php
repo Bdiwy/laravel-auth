@@ -6,7 +6,6 @@
     <p><strong>About me:</strong></p>
     <p>{{ $ninja->bio }}</p>
   </div>
-
   {{-- dojo info --}}
   <div class="border-2 border-dashed bg-white px-4 pb-4 my-4 rounded">
     <h3>Dojo Information</h3>

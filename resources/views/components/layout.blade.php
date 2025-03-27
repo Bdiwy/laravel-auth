@@ -18,10 +18,17 @@
       <h1>
         <a href="{{ route('ninjas.index') }}">Ninja Network</a>
       </h1>
-      <a href="{{ route('ninjas.create') }}">Create New Ninja</a>
-
+      @guest    
       <a href="{{ route('show.login') }}" class="btn">Login</a>
       <a href="{{ route('show.register') }}" class="btn">Register</a>
+      @endguest
+      @auth    
+      <a href="{{ route('ninjas.create') }}">Create New Ninja</a>
+      <form action="{{ route('logout') }}" method="post" class="m-0">
+        @csrf
+        <button type="submit" class="btn">Logout</button>
+      </form>
+      @endauth
     </nav>
   </header>
 
